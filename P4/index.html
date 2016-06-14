@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+		<script src="http://code.jquery.com/jquery-2.2.4.min.js"></script>
+</head>
+<body>
+
+<div style="width:50%;float:left">
+	<textarea name="ingreso" id="textarea" cols="30" rows="10"></textarea><br>
+	<button id="ingresa">Ingresa</button><br>
+<br>
+	<input type="number" id="tamano" min="10">
+<br>
+	<select id="tipografia">
+	<option value="Arial, Helvetica, sans-serif">  Arial</option>
+		<option value="Arial, Helvetica, sans-serif">   Century Gothic, sans-serif</option>
+			<option value="Georgia, Serif">   Georgia</option>
+
+	</select>
+
+</div>
+
+<div style="width: 50%;float:left" id="padre">
+<p id="ingresado"> </p>
+
+
+</div>
+
+
+<script>
+$("#ingresa").on("click",function(){
+	$("#ingresado").append($("#textarea").val()+"<br>");
+	$("#textarea").val("");
+
+}
+	);
+
+$("#tamano").on("change",function(){
+
+
+	var tamano_texto=parseInt($("#tamano").val());
+	$("#ingresado").css("font-size",tamano_texto);
+
+});
+
+$("#tipografia").on("change",function(){
+
+
+	var tipografia_texto=$("#tipografia").val();
+	$("#ingresado").css("font-family",tipografia_texto);
+
+});
+
+</script>
+
+
+	
+</body>
+</html>
