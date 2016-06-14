@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+		<script src="http://code.jquery.com/jquery-2.2.4.min.js"></script>
+</head>
+<body>
+
+<script>
+	var original= [[1,3,4],2,["a","b"]]
+	var copia_arreglo=[]
+	function copia(arreglo){
+
+		$(arreglo).each(function(indice,elemento){
+
+			copia_arreglo.push(elemento);
+
+		});
+
+
+		return copia_arreglo;
+
+
+	}
+
+	
+// Probando
+	copia(original);
+	original.pop();
+// TODO OK! Original no es igual que copia_arreglo!!
+
+
+</script>
+
+
+	
+</body>
+</html>
