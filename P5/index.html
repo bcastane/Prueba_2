@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+		<script src="http://code.jquery.com/jquery-2.2.4.min.js"></script>
+</head>
+<body>
+<div style="width: 400px;height: 400px;background: red;position: absolute"></div>
+
+
+<script>
+
+var $div = $('div');
+$(document).keydown(function(e) {
+    switch (e.which) {
+    case 37:
+        $div.css('left', $div.offset().left - 10);
+        break;
+    case 38:
+        $div.css('top', $div.offset().top - 10);
+        break;
+    case 39:
+        $div.css('left', $div.offset().left + 10);
+        break;
+    case 40:
+        $div.css('top', $div.offset().top + 10);
+        break;
+    }
+})
+
+</script>
+
+
+	
+</body>
+</html>
